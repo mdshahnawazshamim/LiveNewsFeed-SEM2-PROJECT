@@ -1,1 +1,107 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global News Network</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <div class="logo">
+            GLOBAL NEWS
+        </div>
+
+        <nav>
+            <a href="#" class="nav-link active" data-category="general">Home</a>
+            <a href="#" class="nav-link" data-category="world">World</a>
+            <a href="#" class="nav-link" data-category="business">Business</a>
+            <a href="#" class="nav-link" data-category="technology">Technology</a>
+            <a href="#" class="nav-link" data-category="sports">Sports</a>
+        </nav>
+    </header>
+
+    <!-- Breaking News -->
+
+    <div class="ticker">
+        <span>BREAKING NEWS</span>
+        <marquee>
+            Live News Updates From Around The World
+        </marquee>
+    </div>
+
+    <!-- Search -->
+
+    <section class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search latest news..."
+        >
+
+        <button id="searchBtn">
+            Search
+        </button>
+
+    </section>
+
+    <!-- Categories -->
+
+    <section class="categories">
+
+        <button onclick="getNews('general')">Top</button>
+
+        <button onclick="getNews('business')">
+            Business
+        </button>
+
+        <button onclick="getNews('technology')">
+            Technology
+        </button>
+
+        <button onclick="getNews('sports')">
+            Sports
+        </button>
+
+        <button onclick="getNews('health')">
+            Health
+        </button>
+
+    </section>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+        <h1>Today's Headlines</h1>
+        <p>
+            Stay updated with the latest news from
+            around the globe.
+        </p>
+    </section>
+
+    <!-- Loader -->
+
+    <div id="loader">
+        Loading News...
+    </div>
+
+    <!-- Error -->
+
+    <div id="error"></div>
+
+    <!-- News -->
+
+    <section id="newsContainer"></section>
+
+    <script src="newsApi.js"></script>
+    <script src="ui.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
